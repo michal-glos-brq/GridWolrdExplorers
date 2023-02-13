@@ -23,7 +23,7 @@ def impossible(agent):
                       wall(16,16,96,vertical=True), wall(112,16,96,vertical=True), wall(32,32,64,vertical=True), wall(96,32,64,vertical=True)))
     poso = np.unique(poso, axis=0)
     agent_vision = 4.5
-    return board.Board(dims=(128,128), posa=posa, poso=poso, agent_vision=agent_vision, agent_type=agent, move_diagonally=False, animation_speed=args.animation_speed)
+    return board.Board(dims=dims, posa=posa, poso=poso, agent_vision=agent_vision, agent_type=agent, move_diagonally=False, animation_speed=args.animation_speed)
 
 def impossible_mid(agent):
     dims = (64,64)
@@ -32,7 +32,7 @@ def impossible_mid(agent):
                       wall(8,8,48,vertical=True), wall(48,8,48,vertical=True), wall(16,16,32,vertical=True), wall(48,16,32,vertical=True)))
     poso = np.unique(poso, axis=0)
     agent_vision = 3.5
-    return board.Board(dims=(64,64), posa=posa, poso=poso, agent_vision=agent_vision, agent_type=agent, move_diagonally=False, animation_speed=args.animation_speed)
+    return board.Board(dims=dims, posa=posa, poso=poso, agent_vision=agent_vision, agent_type=agent, move_diagonally=False, animation_speed=args.animation_speed)
 
 def impossible_small(agent):
     dims = (16,16)

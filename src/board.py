@@ -48,7 +48,6 @@ class Board:
         self.agent_vision = max(1.5,agent_vision) if move_diagonally else max(1,agent_vision)
         # Here will be stored positions discovered
         self.discovered = np.zeros(dims)
-        # TODO: Add possibility to add agents and obstacles manually with matplotlib
         # Generate or save agents and obstacles
         if poso is None:
             self.p_obstacles = utils.get_n_random_positions(no, dims, posa)
@@ -85,7 +84,6 @@ class Board:
         '''Discover new areas on board'''
         # Itrate through each agent, determine it's sight area and update self.dicovered matrix
         for pos in self.agent_positions:
-            # TODO: This could be more efficient
             # Itarate over each tile in square of side 2*agent_vision+1, crop it as a circle of agents sight
             for x in range(-int(self.agent_vision+0.5), int(self.agent_vision+0.5) + 1):
                 for y in range(-int(self.agent_vision+0.5), int(self.agent_vision+0.5) + 1):
@@ -103,7 +101,6 @@ class Board:
                 # Pass known obstacles and agent positions in order not to bump into each other, update positions
                 agent.step(self.known_obstacles, self.agents, self.discovered)
         # After iteration, update the discovered area and obstacles
-        # TODO: Recognize, if everything possible was already discovered, agents could not move through walls
         self.discover()
 
     ######################### Properties #########################
@@ -122,7 +119,6 @@ class Board:
 
     def _plot_init(self):
         '''Initialize matplotlib figures and axes'''
-        # TODO: Make the figure environment nicer
         gt_board, discovered_board = self.get_boards()
         self.f, (self.a1, self.a2) = plt.subplots(1,2, figsize=(20,10))
         # Create color mapping and apply it to images
