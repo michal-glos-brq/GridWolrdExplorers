@@ -6,7 +6,7 @@ This repository implements several autonomous seearching algorithms.
  - Smart & Coop - works as Smart agent but penalizes discovering the same tiles by multiple agents
 
  ### How to run
- Just run `python3 agensearch.py` from the repository root with following possibilities:
+ Scipt `python3 agensearch.py` to be run from the repository root some of the following options:
   - `-c` opens map editor before search (j: save and run, enter: run, left_mouse_click: change tile)
   - `-l` load map from JSON file 
   - `--diagonally` let agents move diagonally 
