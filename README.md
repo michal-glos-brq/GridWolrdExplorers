@@ -1,5 +1,5 @@
 ### Project TileWorld:
-This repository implements several autonomous seearching algorithms.
+This repository implements several autonomous searching algorithms.
  - Random - walks randomly
  - Naive - walks directly to the closes undiscovered spot on the map
  - Smart - evaluates the amount of tiles discovered per move needed - greedy (no planning, take what is the best now)
